@@ -13,7 +13,7 @@
   },
   "main":"dist/vue-2048.umd.js",
   "module":"dist/vue-2048.es.js",
-  "types": "src/types/index.d.ts",
+  "types": "dist/vue-2048.es.d.ts",
   "dependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
     "vue": "^3.4.38"

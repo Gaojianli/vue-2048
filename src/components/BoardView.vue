@@ -12,7 +12,7 @@
 import Cell from './Cell.vue'
 import TileView from './TileView.vue'
 import GameEndOverlay from './GameEndOverlay.vue'
-import { Board } from '../board'
+import { Board, Tile } from './board'
 import { onMounted, onBeforeUnmount, ref, computed } from 'vue'
 
 const board = ref(new Board())
@@ -36,6 +36,6 @@ onBeforeUnmount(() => {
   window.removeEventListener('keydown', handleKeyDown)
 })
 const tiles = computed(() => {
-  return board.value.tiles.filter((tile) => tile.value != 0)
+  return board.value.tiles.filter((tile:Tile) => tile.value != 0)
 })
 </script>

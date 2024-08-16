@@ -12,15 +12,15 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      include: ['src/**/*.vue', 'src/**/*.ts'],
-      outDir: 'dist/types',
       staticImport: true,
       insertTypesEntry: true,
+      rollupTypes:true,
+      tsconfigPath: './tsconfig.build.json',
     })
   ],
   build: {
     lib: {
-      entry: 'src/App.vue',
+      entry: 'src/index.ts',
       name: 'vue-2048',
       fileName: (format) => `vue-2048.${format}.js`
     },

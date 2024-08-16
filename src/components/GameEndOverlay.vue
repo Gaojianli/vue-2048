@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { toRefs, computed } from 'vue'
-import type { Board } from '../board'
+import type { Board } from './board'
 
 const props = defineProps<{
   board: Board

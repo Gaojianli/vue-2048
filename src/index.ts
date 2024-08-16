@@ -7,4 +7,4 @@ const install = (app: App) => {
 Vue2048.install = install
 
 export { Vue2048 }
-export default Vue2048 as unknown as Plugin
+
