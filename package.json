@@ -2,7 +2,10 @@
   "name": "vue-2048",
   "version": "3.0.0",
   "description": "A Vue.js project",
-  "author": "chang_su <pengfoo@126.com>",
+  "author": {
+    "name": "Gaojianli",
+    "email": "admin@gaojianli.me"
+  },
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
