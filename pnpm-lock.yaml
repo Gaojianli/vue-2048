@@ -10,14 +10,23 @@ importers:
     dependencies:
       '@vitejs/plugin-vue':
         specifier: ^5.1.2
-        version: 5.1.2(vite@5.4.1(sass@1.77.8))(vue@3.4.38)
+        version: 5.1.2(vite@5.4.1(@types/node@22.3.0)(sass@1.77.8))(vue@3.4.38)
       vue:
         specifier: ^3.4.38
         version: 3.4.38
     devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.4
+        version: 20.1.4
+      '@types/node':
+        specifier: ^22.3.0
+        version: 22.3.0
       '@vue/compiler-sfc':
         specifier: ^3.4.38
         version: 3.4.38
+      '@vue/tsconfig':
+        specifier: ^0.5.1
+        version: 0.5.1
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.41)
@@ -29,7 +38,10 @@ importers:
         version: 1.77.8
       vite:
         specifier: ^5.4.1
-        version: 5.4.1(sass@1.77.8)
+        version: 5.4.1(@types/node@22.3.0)(sass@1.77.8)
+      vite-bundle-analyzer:
+        specifier: ^0.10.5
+        version: 0.10.5
 
 packages:
 
@@ -288,8 +300,14 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@tsconfig/node20@20.1.4':
+    resolution: {integrity: sha512-sqgsT69YFeLWf5NtJ4Xq/xAF8p4ZQHlmGW74Nu2tD4+g5fAsposc4ZfaaPixVu4y01BEiDCWLRDCvDM5JOsRxg==}
+
   '@types/estree@1.0.5':
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+
+  '@types/node@22.3.0':
+    resolution: {integrity: sha512-nrWpWVaDZuaVc5X84xJ0vNrLvomM205oQyLsRt7OHNZbSHslcWsvgFR7O7hire2ZonjLrWBbedmotmIlJDVd6g==}
 
   '@vitejs/plugin-vue@5.1.2':
     resolution: {integrity: sha512-nY9IwH12qeiJqumTCLJLE7IiNx7HZ39cbHaysEUd+Myvbz9KAqd2yq+U01Kab1R/H1BmiyM2ShTYlNH32Fzo3A==}
@@ -326,6 +344,9 @@ packages:
 
   '@vue/shared@3.4.38':
     resolution: {integrity: sha512-q0xCiLkuWWQLzVrecPb0RMsNWyxICOjPrcrwxTUEHb1fsnvni4dcuyG7RT/Ie7VPTvnjzIaWzRMUBsrqNj/hhw==}
+
+  '@vue/tsconfig@0.5.1':
+    resolution: {integrity: sha512-VcZK7MvpjuTPx2w6blwnwZAu5/LgBUtejFOi3pPGQFXQN5Ela03FUtd2Qtg4yWGGissVL0dr6Ro1LfOFh+PCuQ==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -592,11 +613,17 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
+  undici-types@6.18.2:
+    resolution: {integrity: sha512-5ruQbENj95yDYJNS3TvcaxPMshV7aizdv/hWYjGIKoANWKjhWNBsr2YEuYZKodQulB1b8l7ILOuDQep3afowQQ==}
+
   update-browserslist-db@1.1.0:
     resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
+
+  vite-bundle-analyzer@0.10.5:
+    resolution: {integrity: sha512-gxIFQ6ifoQjDXaVWJmXHwI2VEVqyz6FXHKicNpTe4Pr2MAka6NQVRcmgznziRzbl9rhMP0qIc5Be8PxfGXUhgQ==}
 
   vite@5.4.1:
     resolution: {integrity: sha512-1oE6yuNXssjrZdblI9AfBbHCC41nnyoVoEZxQnID6yvQZAFBzxxkqoFLtHUMkYunL8hwOLEjgTuxpkRxvba3kA==}
@@ -797,11 +824,17 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.20.0':
     optional: true
 
+  '@tsconfig/node20@20.1.4': {}
+
   '@types/estree@1.0.5': {}
 
-  '@vitejs/plugin-vue@5.1.2(vite@5.4.1(sass@1.77.8))(vue@3.4.38)':
+  '@types/node@22.3.0':
     dependencies:
-      vite: 5.4.1(sass@1.77.8)
+      undici-types: 6.18.2
+
+  '@vitejs/plugin-vue@5.1.2(vite@5.4.1(@types/node@22.3.0)(sass@1.77.8))(vue@3.4.38)':
+    dependencies:
+      vite: 5.4.1(@types/node@22.3.0)(sass@1.77.8)
       vue: 3.4.38
 
   '@vue/compiler-core@3.4.38':
@@ -857,6 +890,8 @@ snapshots:
       vue: 3.4.38
 
   '@vue/shared@3.4.38': {}
+
+  '@vue/tsconfig@0.5.1': {}
 
   ansi-regex@5.0.1: {}
 
@@ -1135,18 +1170,23 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
+  undici-types@6.18.2: {}
+
   update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
       browserslist: 4.23.3
       escalade: 3.1.2
       picocolors: 1.0.1
 
-  vite@5.4.1(sass@1.77.8):
+  vite-bundle-analyzer@0.10.5: {}
+
+  vite@5.4.1(@types/node@22.3.0)(sass@1.77.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
       rollup: 4.20.0
     optionalDependencies:
+      '@types/node': 22.3.0
       fsevents: 2.3.3
       sass: 1.77.8
 
