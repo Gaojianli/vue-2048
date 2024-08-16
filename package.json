@@ -1,6 +1,6 @@
 {
   "name": "vue-2048",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A Vue.js project",
   "author": {
     "name": "Gaojianli",
@@ -11,8 +11,8 @@
     "dev": "vite",
     "build": "npm run clean && vite build"
   },
-  "main":"dist/vue-2048.umd.js",
-  "module":"dist/vue-2048.es.js",
+  "main": "dist/vue-2048.umd.js",
+  "module": "dist/vue-2048.es.js",
   "types": "dist/vue-2048.es.d.ts",
   "dependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
