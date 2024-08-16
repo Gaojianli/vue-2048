@@ -6,7 +6,6 @@
     "name": "Gaojianli",
     "email": "admin@gaojianli.me"
   },
-  "private": true,
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
