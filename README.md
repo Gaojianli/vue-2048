@@ -1,9 +1,24 @@
 vue-2048
 ==========
 
-This is a clone of [2048-react](https://github.com/IvanVergiliev/2048-react).What I do is re-implementing it using [Vue 3.x](https://cn.vuejs.org/),[Vite](https://github.com/vitejs/vite/)
-and [SASS](http://sass-lang.com/).
-**Here is the [living demo](https://pengfu.github.io/vue-2048/)**
+This is a implement of 2048 in Vue 3.0, typescript. Basically a copy from https://github.com/pengfu/vue-2048, and convert it to typescript.
+
+You can use it in your vue project if you have a blank area and don't know what to fill it.
+# Example
+![alt text](screenshots/example.png)
+
+# Usage
+```bash
+npm i vue-2048
+```
+```html
+<template>
+ <vue2048 style="margin: 0 auto" />
+</template>
+<script lang="ts" setup>
+import vue2048 from 'vue-2048'
+</script>
+```
 
 ### Install the dependencies
 
